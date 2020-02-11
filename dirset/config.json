@@ -1,5 +1,5 @@
 {
-    "url": "https://www.example.com",
+    "url": "https://demo.ctfd.io/",
     "savedir": "./chal",
     "session": "",
     "solver": "solver.py"

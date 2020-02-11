@@ -55,6 +55,7 @@ def load_challenge_spec(config: Dict[str, str], challenge_id: int) -> Dict[str, 
 
     return challenge_spec
 
+
 def create_directory(config: Dict[str, str], challenge_spec: Dict[str, Any]) -> None:
     directory_name: str = f"{config['savedir']}/{challenge_spec['category']}-{challenge_spec['name']}"
     
@@ -117,6 +118,9 @@ def main() -> None:
         print("📦  Create directory (id: {}).".format(challenge_spec["id"]))
         create_directory(config, challenge_spec)
     print("👌  Done.")
+    print("="*30)
+
+    print("🙆‍♂️  dirset ended successfully.")
     
 
 if __name__ == '__main__':
