@@ -2,5 +2,6 @@
     "url": "https://demo.ctfd.io/",
     "savedir": "./chal",
     "session": "",
-    "solver": "solver.py"
+    "solver": "solver.py",
+    "mode": "moderate"
 }

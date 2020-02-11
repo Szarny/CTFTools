@@ -1,6 +1,7 @@
 import sys
 import os
 import json
+import time
 import requests
 from bs4 import BeautifulSoup
 
@@ -108,6 +109,10 @@ def main() -> None:
         print("🌐  Fetch challenge spec (id: {}).".format(challenge_id))
         challenge_spec: Dict[str, Any] = load_challenge_spec(config, challenge_id)
         challenge_specs.append(challenge_spec)
+
+        if config.get("mode") == "moderate":
+            time.sleep(1)
+            
     print("👌  Done.")
     print("="*30)
     
