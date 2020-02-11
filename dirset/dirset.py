@@ -120,7 +120,7 @@ def main() -> None:
     print("👌  Done.")
     print("="*30)
 
-    print("🙆‍♂️  dirset ended successfully.")
+    print("👍  dirset ended successfully.")
     
 
 if __name__ == '__main__':
