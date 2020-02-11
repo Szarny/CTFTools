@@ -75,16 +75,16 @@ def create_directory(config: Dict[str, str], challenge_spec: Dict[str, Any]) -> 
     if len(challenge_spec["file_links"]) != 0:
         for file_link in challenge_spec["file_links"]:
             filename: str = file_link.split("/")[-1].split("?")[0]
-            print("📝  Failed to create directory.")
+            print("📝  Fetch attach file. ({})".format(filename))
 
             response: requests.models.Response = requests.get(url=f"{config['url']}{file_link}",
                                                               cookies={"session": config["session"]})
 
             if response.status_code != requests.codes.ok:
-                print("⚠️  Failed to fetch attach files. ({})".format(filename))
+                print("⚠️  Failed to fetch attach file. ({})".format(filename))
             
-                with open(f"{directory_name}/{filename}", "wb") as f:
-                    f.write(response.content)
+            with open(f"{directory_name}/{filename}", "wb") as f:
+                f.write(response.content)
     
     return
 
